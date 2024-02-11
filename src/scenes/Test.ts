@@ -55,7 +55,7 @@ export class Test extends Scene {
       true
     );
 
-    this.load.image("sky", "assets/sky.png");
+    this.load.image("sky", "assets/sky3.png");
     this.load.image("ground", "assets/platform.png");
     this.load.image("star", "assets/star.png");
     this.load.image("completionBackground", "assets/blue_panel.png");
