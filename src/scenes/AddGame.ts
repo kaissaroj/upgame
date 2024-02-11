@@ -18,9 +18,9 @@ export class AddGame extends Scene {
     this.load.image("ground", "assets/platform.png");
     this.load.image("star", "assets/star.png");
 
-    this.load.spritesheet("dude", "assets/dude.png", {
-      frameWidth: 32,
-      frameHeight: 48,
+    this.load.spritesheet("dude", "assets/spritesheet.png", {
+      frameWidth: 124,
+      frameHeight: 201,
     });
     this.load.image("button", "assets/green_button.png");
   }
@@ -87,7 +87,10 @@ export class AddGame extends Scene {
     this.input.setDraggable(this.star);
     this.draggableObjectsPositions.push({ id: "star", x: 700, y: 50 });
 
-    this.player = this.add.sprite(100, 450, "dude").setInteractive();
+    this.player = this.add
+      .sprite(100, 450, "dude")
+      .setScale(0.3)
+      .setInteractive();
     this.player.setData("id", `player`);
     this.input.setDraggable(this.player);
     this.draggableObjectsPositions.push({ id: "player", x: 100, y: 450 });
